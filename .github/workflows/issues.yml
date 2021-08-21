@@ -6,7 +6,7 @@ on:
   pull_request_target:
     types: [opened, labeled]
 env:
-  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  MY_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
 jobs:
   assign_one_project:
@@ -18,4 +18,4 @@ jobs:
       if: github.event.action == 'opened'
       with:
         project: 'https://github.com/orgs/7Cav/projects/5'
-        column_name: "Todo"
+        column_name: "Backlog"
