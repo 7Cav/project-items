@@ -18,3 +18,4 @@ jobs:
       if: github.event.action == 'opened'
       with:
         project: 'https://github.com/orgs/7Cav/projects/5'
+        column_name: "Todo"
