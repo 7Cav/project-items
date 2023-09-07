@@ -1,21 +1,21 @@
-name: Auto Assign to Project(s)
+# name: Auto Assign to Project(s)
 
-on:
-  issues:
-    types: [opened, labeled]
-  pull_request_target:
-    types: [opened, labeled]
-env:
-  MY_GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+# on:
+#   issues:
+#     types: [opened, labeled]
+#   pull_request_target:
+#     types: [opened, labeled]
+# env:
+#   MY_GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
 
-jobs:
-  assign_one_project:
-    runs-on: ubuntu-latest
-    name: Assign to S6 Project
-    steps:
-    - name: Assign NEW issues and NEW pull requests to S6 project
-      uses: srggrs/assign-one-project-github-action@1.2.1
-      if: github.event.action == 'opened'
-      with:
-        project: 'https://github.com/orgs/7Cav/projects/7'
-        column_name: "Backlog"
+# jobs:
+#   assign_one_project:
+#     runs-on: ubuntu-latest
+#     name: Assign to S6 Project
+#     steps:
+#     - name: Assign NEW issues and NEW pull requests to S6 project
+#       uses: srggrs/assign-one-project-github-action@1.2.1
+#       if: github.event.action == 'opened'
+#       with:
+#         project: 'https://github.com/orgs/7Cav/projects/7'
+#         column_name: "Backlog"
